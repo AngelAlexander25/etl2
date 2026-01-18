@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[context.production.environment]
+  # Variables de entorno para producción
+  REACT_APP_API_URL = "https://tu-backend.herokuapp.com/api"
+
+[context.development.environment]
+  # Variables para desarrollo local
+  REACT_APP_API_URL = "http://localhost:8000/api"
+
+# Redirect all non-matching routes to index.html para que React Router funcione
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,17 @@
+{
+  "crecimiento_anual": 10.2,
+  "ocupacion_hotelera": 75.5,
+  "turismo_anual_millones": 12.8,
+  "inversion_extranjera_porcentaje": 45,
+  "desarrollo_proyectos_nuevos": 156,
+  "demanda_departamentos": "Alta",
+  "demanda_casas": "Media",
+  "demanda_villas": "Muy Alta",
+  "zonas_mayor_crecimiento": [
+    "Tulum",
+    "Puerto Cancún",
+    "Playa del Carmen"
+  ],
+  "precio_promedio_renta_mensual": 18500,
+  "roi_promedio_anual": 8.5
+}

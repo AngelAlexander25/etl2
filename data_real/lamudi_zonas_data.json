@@ -1,0 +1,58 @@
+{
+  "Zona Hotelera": {
+    "precio_promedio_m2": 75000,
+    "precio_min": 3000000,
+    "precio_max": 15000000,
+    "tipo_predominante": "Departamento",
+    "demanda": "Alta",
+    "plusvalia_anual": 10.5
+  },
+  "Puerto Cancún": {
+    "precio_promedio_m2": 85000,
+    "precio_min": 4000000,
+    "precio_max": 25000000,
+    "tipo_predominante": "Villa",
+    "demanda": "Alta",
+    "plusvalia_anual": 12.0
+  },
+  "Centro Cancún": {
+    "precio_promedio_m2": 28000,
+    "precio_min": 800000,
+    "precio_max": 3500000,
+    "tipo_predominante": "Departamento",
+    "demanda": "Media",
+    "plusvalia_anual": 8.5
+  },
+  "Región 15": {
+    "precio_promedio_m2": 22000,
+    "precio_min": 1000000,
+    "precio_max": 4000000,
+    "tipo_predominante": "Casa",
+    "demanda": "Media",
+    "plusvalia_anual": 9.0
+  },
+  "Playa del Carmen": {
+    "precio_promedio_m2": 68000,
+    "precio_min": 3600000,
+    "precio_max": 20000000,
+    "tipo_predominante": "Condominio",
+    "demanda": "Alta",
+    "plusvalia_anual": 11.5
+  },
+  "Tulum": {
+    "precio_promedio_m2": 72000,
+    "precio_min": 5000000,
+    "precio_max": 40000000,
+    "tipo_predominante": "Villa",
+    "demanda": "Muy Alta",
+    "plusvalia_anual": 15.0
+  },
+  "Puerto Morelos": {
+    "precio_promedio_m2": 45000,
+    "precio_min": 2000000,
+    "precio_max": 8000000,
+    "tipo_predominante": "Casa",
+    "demanda": "Media",
+    "plusvalia_anual": 7.5
+  }
+}
