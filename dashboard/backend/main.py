@@ -5,6 +5,11 @@ from psycopg2.extras import RealDictCursor
 from typing import Optional, List
 from datetime import datetime
 import json
+import os
+from dotenv import load_dotenv
+
+# Cargar variables de entorno
+load_dotenv()
 
 # Crear aplicación FastAPI
 app = FastAPI(
@@ -13,22 +18,28 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configurar CORS (permite que React se conecte desde otro puerto)
+# Configurar CORS - permitir Netlify y localhost
+allowed_origins = [
+    "http://localhost:3000",  # Desarrollo local
+    "https://*.netlify.app",  # Cualquier sitio de Netlify
+    os.getenv("FRONTEND_URL", "http://localhost:3000"),  # URL del frontend desde env
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # React corre en puerto 3000
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Configuración de la base de datos
+# Configuración de la base de datos desde variables de entorno
 DB_CONFIG = {
-    'host': 'localhost',
-    'port': 5432,
-    'user': 'postgres',
-    'password': '25092002',
-    'database': 'cancun_real_estate'
+    'host': os.getenv('DB_HOST', 'localhost'),
+    'port': int(os.getenv('DB_PORT', 5432)),
+    'user': os.getenv('DB_USER', 'postgres'),
+    'password': os.getenv('DB_PASSWORD', '25092002'),
+    'database': os.getenv('DB_NAME', 'cancun_real_estate')
 }
 
 def get_db_connection():
